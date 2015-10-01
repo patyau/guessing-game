@@ -2,15 +2,20 @@ var userName = prompt('What is your name?');
 var answersCorrect;
 answersCorrect = 0;
 
+var one = document.getElementById('one');
+var two = document.getElementById('two');
+var three = document.getElementById('three');
+var correct = document.getElementById('correct');
+
 function ques1() {
-	var question1 = prompt("Let's play a game. I'll ask you three yes/no questions. You will try to guess the right answers... 1. Is Tulsa the capitol of Oklahoma? YES or NO");
+	var question1 = prompt("1. Is Tulsa the capitol of Oklahoma? YES or NO");
 	console.log('question1 verbatim response: ' + question1);
 	console.log('question1 toLowerCase() response: ' + question1.toLowerCase());
 	if(question1.toLowerCase() === 'no' || question1.toLowerCase() === 'n'){
-		alert('Good job ' + userName + '. You got the first question correct. The capital city of Oklahoma is Oklahoma City');
+		one.innerHTML = 'Good job ' + userName + '. You got the first question correct. The capital city of Oklahoma is Oklahoma City';
 		answersCorrect ++
 	} else {
-		alert('Sorry ' + userName + '. You got the first question wrong. The capital city of Oklahoma is Oklahoma City');
+		one.innerHTML = 'Sorry ' + userName + '. You got the first question wrong. The capital city of Oklahoma is Oklahoma City';
 	}
 }
 
@@ -19,10 +24,10 @@ function ques2() {
 	console.log('question2 verbatim response: ' + question2);
 	console.log('question2 toLowerCase() response: ' + question2.toLowerCase());
 	if(question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n') {
-		alert('Good job ' + userName + '. "You got the second question right". The highest selling digital single of all time is "Call Me Maybe" by Carly Rae Jespen.');
+		two.innerHTML = 'Good job ' + userName + '. "You got the second question right". The highest selling digital single of all time is "Call Me Maybe" by Carly Rae Jespen.';
 		answersCorrect ++
 	} else {
-		alert('Sorry ' + userName + '. You got the second question wrong. The highest selling digital single of all time is "Call Me Maybe" by Carly Rae Jespen.');
+		two.innerHTML = 'Sorry ' + userName + '. You got the second question wrong. The highest selling digital single of all time is "Call Me Maybe" by Carly Rae Jespen.';
 	}
 }
 
@@ -31,10 +36,10 @@ function ques3() {
 	console.log('question3 verbatim response: ' + question3);
 	console.log('question3 toLowerCase response: ' + question3.toLowerCase());
 	if(question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y') {
-		alert('Good job ' + userName + '. You got the third question right. Russell Westbrook averaged 28.1 ppg to lead the NBA in scoring last year.');
+		three.innerHTML = 'Good job ' + userName + '. You got the third question right. Russell Westbrook averaged 28.1 ppg to lead the NBA in scoring last year.';
 		answersCorrect ++
 	} else {
-		alert('Sorry ' + userName + '. You got the third question wrong. Russell Westbrook averaged 28.1 ppg to lead the NBA in scoring last year.');
+		three.innerHTML = 'Sorry ' + userName + '. You got the third question wrong. Russell Westbrook averaged 28.1 ppg to lead the NBA in scoring last year.';
 	}
 }
 
@@ -43,4 +48,4 @@ ques2();
 ques3();
 
 console.log('answersCorrect = ' + answersCorrect);
-alert('Thanks for playing ' + userName + '! You got ' + answersCorrect + '/3 questions correct.');
+correct.innerHTML = 'Thanks for playing ' + userName + '! You got ' + answersCorrect + '/3 questions correct.';
