@@ -1,6 +1,6 @@
 # guessing-game
 
-Driver: Chase Reed
+Driver: Jesse Thach
 <br />
 Navigator: Pat Yau
 
