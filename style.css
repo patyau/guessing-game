@@ -1,0 +1,12 @@
+body {
+	font-family: Helvetica, Arial, Verdana;
+	background-color: #ecedee;
+}
+
+.correct {
+	color: green;
+}
+
+.incorrect {
+	color: red;
+}
