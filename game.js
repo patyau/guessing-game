@@ -1,7 +1,5 @@
 var userName = prompt('What is your name?');
-var answersCorrect;
-answersCorrect = 0;
-
+var answersCorrect = 0;
 var one_green = document.getElementById('one_green');
 var one_red = document.getElementById('one_red');
 var two_green = document.getElementById('two_green');
@@ -12,9 +10,7 @@ var correct = document.getElementById('correct');
 var pic1 = document.getElementById('pic1');
 var pic2 = document.getElementById('pic2');
 var pic3 = document.getElementById('pic3');
-
 var questions = ['1. Is Tulsa the capitol of Oklahoma? YES or NO', '2. Is the song "I Gotta Feeling" by the Black Eyed Peas the highest selling digital single of all time? YES or NO', '3. Did Russell Westbrook lead the league in scoring average per game in the 2014-2015 NBA season? YES or NO'];
-
 var answers = ['yes', 'y', 'no', 'n'];
 
 function ques1() {
@@ -56,9 +52,14 @@ function ques3() {
 	}
 }
 
+function summary() {
+	console.log('answersCorrect = ' + answersCorrect);
+	correct.innerHTML = 'Thanks for playing ' + userName + '! You got ' + answersCorrect + '/3 questions correct.';	
+}
+
 ques1();
 window.setTimeout(ques2, 1000);
 window.setTimeout(ques3, 1000);
+window.setTimeout(summary, 1000);
 
-console.log('answersCorrect = ' + answersCorrect);
-correct.innerHTML = 'Thanks for playing ' + userName + '! You got ' + answersCorrect + '/3 questions correct.';
+
